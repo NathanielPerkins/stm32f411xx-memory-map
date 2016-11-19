@@ -1,6 +1,6 @@
 # [ doc = "Serial peripheral interface" ]
 # [ repr ( C ) ]
-pub struct I2s2ext {
+pub struct Spi {
     # [ doc = "0x00 - control register 1" ]
     pub cr1: Cr1,
     # [ doc = "0x04 - control register 2" ]

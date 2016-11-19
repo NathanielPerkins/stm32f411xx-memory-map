@@ -27,9 +27,9 @@ pub mod usart;
 use dbg::Dbg;
 use gpio::Gpio;
 use gptim::GpTim;
-use i2c::I2c3;
+use i2c::I2c;
 use rcc::Rcc;
-use spi::I2s2ext;
+use spi::Spi;
 use usart::Usart;
 
 // const ADC_COMMON: usize = 0x40012300;
@@ -150,11 +150,11 @@ pub unsafe fn gpiof_mut() -> &'static mut Gpio {
 }
 
 /// I2C3 register block (&'static)
-pub fn i2c3() -> &'static I2c3 {
+pub fn i2c3() -> &'static I2c {
     unsafe { deref(I2C3) }
 }
 /// I2C3 register block (&'static mut)
-pub unsafe fn i2c3_mut() -> &'static mut I2c3 {
+pub unsafe fn i2c3_mut() -> &'static mut I2c {
     deref_mut(I2C3)
 }
 /// RCC register block (&'static)
@@ -168,11 +168,11 @@ pub unsafe fn rcc_mut() -> &'static mut Rcc {
 }
 
 /// SPI1 register block (&'static)
-pub fn spi1() -> &'static I2s2ext {
+pub fn spi1() -> &'static Spi {
     unsafe { deref(SPI1) }
 }
 /// SPI1 register block (&'static mut)
-pub unsafe fn spi1_mut() -> &'static mut I2s2ext {
+pub unsafe fn spi1_mut() -> &'static mut Spi {
     deref_mut(SPI1)
 }
 /// TIM2 register block (&'static)

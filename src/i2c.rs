@@ -1,6 +1,6 @@
 # [ doc = "Inter-integrated circuit" ]
 # [ repr ( C ) ]
-pub struct I2c3 {
+pub struct I2c {
     # [ doc = "0x00 - Control register 1" ]
     pub cr1: Cr1,
     # [ doc = "0x04 - Control register 2" ]
