@@ -1,0 +1,11 @@
+[package]
+authors = ["Shaun Karran <shaun.karran@gmail.com>, Nathan Perkins <nathanieljperkins@gmail.com>"]
+description = "Memory map for STM32F411XX microcontrollers"
+keywords = ["arm", "cortex-m", "stm32"]
+license = "MIT OR Apache-2.0"
+name = "stm32f411xx-memory-map"
+repository = "https://github.com/NathanielPerkins/stm32f411xx-memory-map"
+version = "0.1.0"
+
+[dependencies]
+volatile-register = "0.1.2"
