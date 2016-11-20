@@ -71,7 +71,7 @@ const GPIOB: usize = 0x40020400;
 const GPIOA: usize = 0x40020000;
 const I2C3: usize = 0x40005c00;
 // const I2C2: usize = 0x40005800;
-// const I2C1: usize = 0x40005400;
+const I2C1: usize = 0x40005400;
 // const I2S2ext: usize = 0x40003400;
 // const I2S3ext: usize = 0x40004000;
 const SPI1: usize = 0x40013000;
@@ -153,9 +153,18 @@ pub unsafe fn gpiof_mut() -> &'static mut Gpio {
 pub fn i2c3() -> &'static I2c {
     unsafe { deref(I2C3) }
 }
+
 /// I2C3 register block (&'static mut)
 pub unsafe fn i2c3_mut() -> &'static mut I2c {
     deref_mut(I2C3)
+}
+/// I2C1 register block (&'static)
+pub fn i2c1() -> &'static I2c {
+    unsafe { deref(I2C1) }
+}
+/// I2C1 register block (&'static mut)
+pub unsafe fn i2c1_mut() -> &'static mut I2c {
+    deref_mut(I2C1)
 }
 /// RCC register block (&'static)
 pub fn rcc() -> &'static Rcc {
